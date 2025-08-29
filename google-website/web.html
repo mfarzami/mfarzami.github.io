@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Search - Mitra Farzami</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="results-page" class="visible" tabindex="-1">
+    <header class="results-header">
+      <div class="results-header-top">
+        <img src="GoogleLogo.png" alt="Google Logo" class="google-logo-img small">
+        <form id="results-search-form" autocomplete="off">
+          <input id="results-search-bar" type="text" value="Who is Mitra Farzami?" />
+          <div id="results-search-suggestions" class="hidden"></div>
+          <button id="results-search-btn" type="button">
+            <svg width="20" height="20" viewBox="0 0 20 20"><circle cx="9" cy="9" r="7" stroke="#888" stroke-width="2" fill="none"/><line x1="14" y1="14" x2="19" y2="19" stroke="#888" stroke-width="2"/></svg>
+          </button>
+          <button id="results-lucky-btn" type="button">I'm Feeling Lucky</button>
+        </form>
+      </div>
+      <nav class="results-nav">
+        <a class="active" id="nav-web" href="web.html">Web</a>
+        <a id="nav-images" href="images.html">Images</a>
+        <!--<a id="nav-maps" href="maps.html">Maps</a>-->
+      </nav>
+    </header>
+    <div class="results-main-container">
+      <main class="search-results visible" id="web-results">
+        <div class="results-count">About 25,270,000,000 results</div>
+        <section class="result">
+          <div class="result-title" onclick="openPopup('about')" style="cursor: pointer; color: #1a0dab;">About Mitra</div>
+          <div class="result-url">mfarzami.github.io/about</div>
+          <div class="result-snippet">Mitra Farzami is a software engineer living in Austin, Texas.</div>
+        </section>
+        <section class="result">
+          <div class="result-title" onclick="openPopup('resume')" style="cursor: pointer; color: #1a0dab;">Resume</div>
+          <div class="result-url">mfarzami.github.io/resume</div>
+          <div class="result-snippet">Check out Mitra's work, academic experience, and skills.</div>
+        </section>
+        <section class="result">
+          <div class="result-title" onclick="openPopup('contact')" style="cursor: pointer; color: #1a0dab;">Contact</div>
+          <div class="result-url">mfarzami.github.io/contact</div>
+          <div class="result-snippet">Get in touch with Mitra for any questions or just to say hello!</div>
+        </section>
+      </main>
+    </div>
+  </div>
+    
+    <!-- Popup Containers -->
+    <div id="about-popup" class="popup-overlay hidden">
+      <div class="popup-content">
+        <div class="popup-header">
+          <button class="popup-close" onclick="closePopup('about')">✕</button>
+        </div>
+        <div class="popup-body">
+          <div class="popup-content-wrapper">            
+            <p class="popup-intro">
+              Hi! I'm Mitra, a software engineer living in Austin, Texas but originally from NYC. I'm currently working at Apple on an ML Data Platform Team.
+              I graduated from Cornell University in 2024, where I studied Information Science and concentrated in Data Science.
+              Outside of work, I love pursuing graphic design, exploring nature, traveling, and cooking.
+            </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="resume-popup" class="popup-overlay hidden">
+      <div class="popup-content">
+        <div class="popup-header">
+          <button class="popup-close" onclick="closePopup('resume')">✕</button>
+        </div>
+        <div class="popup-body">
+          <div class="popup-content-wrapper">
+            
+            <h2 class="popup-section-title resume-section">Education</h2>
+            
+            <div class="education-card">
+              <h3 class="degree-title">Cornell University, Bowers College of Computing and Information Science</h3>
+              <p class="university-name">Ithaca, NY</p>
+              <p class="graduation-info">Bachelor of Science in Information Science, Concentration in Data Science (GPA: 3.8)</p>
+              <p class="graduation-info">August 2020 – May 2024</p>
+              <div class="coursework">
+                <strong>Relevant Coursework:</strong> Computing with Python, Web Programming (Full Stack), Data Science, OOP & Data Structures with Java, Analytics with R, Machine Learning, Data-Driven Web Applications, BI Systems, LLMs, Networks Crowds & Markets, Statistics
+              </div>
+            </div>
+            
+            <div class="education-card">
+              <h3 class="degree-title">The Dalton School</h3>
+              <p class="university-name">New York, NY</p>
+              <p class="graduation-info">High School Diploma (GPA: 3.9 | ACT: 35)</p>
+              <p class="graduation-info">September 2016 – June 2020</p>
+              <div class="activities">
+                <strong>Activities:</strong> Editor-in-Chief of Yearbook, Editor-in-Chief of Stripe Magazine, Co-Founder of Graphic Design Club, Math Tutor, Math Team Member
+              </div>
+            </div>
+            
+            <h2 class="popup-section-title resume-section">Experience</h2>
+            
+            <div class="experience-card">
+              <h3 class="job-title">Software Engineer</h3>
+              <p class="company-name">Apple (Applied Machine Learning Team, Information Systems & Technology Division)</p>
+              <p class="job-location">Austin, TX</p>
+              <p class="job-duration">October 2024 – Present</p>
+              <ul class="job-details">
+                <li>Developed a pilot version of a self-service data quality tool offering scheduled analysis/alerting (Spark, Airflow, Docker, GX, Slack API), designed and collected requirements for the tool in collaboration with team of 12 cross-functional PMs, SWEs, MLEs, and managers</li>
+                <li>Developed an event tracking library for monitoring data pipelines, conducted integration/performance testing (Python, OpenTelemetry)</li>
+                <li>Developed various ETL pipelines, collaborated with a cross-functional team of 25+ to implement and integrate code (PySpark, Airflow)</li>
+                <li>Defined a 3-month anomaly detection project for our team's summer intern, and provided mentorship and technical guidance</li>
+                <li>Directed offshore vendor team to consolidate 20+ dashboards into 2 and migrate dashboard platform, improving performance and UX</li>
+                <li>Worked on branding for internal tools, including logo design, deck content, and posters, and presented projects to various stakeholders</li>
+              </ul>
+            </div>
+            
+            <div class="experience-card">
+              <h3 class="job-title">Data Platform Intern</h3>
+              <p class="company-name">Apple (Applied Machine Learning Team, Information Systems & Technology Division)</p>
+              <p class="job-location">Austin, TX</p>
+              <p class="job-duration">May 2023 – August 2023</p>
+              <ul class="job-details">
+                <li>Built data monitoring dashboards that are currently used by 15+ data pipelines, each scaling to an average of 3 billion data points per day</li>
+                <li>Facilitated user interviews and coordinated group meetings to gain insights into various teams' data monitoring requirements</li>
+                <li>Selected as 1 of 20 from a pool of 50+ interns to return to a full-time rotational program of Applied Machine Learning teams</li>
+              </ul>
+            </div>
+            
+            <div class="experience-card">
+              <h3 class="job-title">Data Science Intern</h3>
+              <p class="company-name">Ikigai Labs (A no-code ML/AI platform)</p>
+              <p class="job-location">Boston, MA</p>
+              <p class="job-duration">June 2022 – August 2022</p>
+              <ul class="job-details">
+                <li>Developed a grading algorithm to quantify vendor performance from various metrics, resulting in a POC presented to clients</li>
+                <li>Built Python data connectors and scrapers for efficient data ingestion from various sources (Python, BeautifulSoup)</li>
+                <li>Collaborated with customer success team to deliver customized solutions including data ingestion, ETL, ML modeling, and more</li>
+              </ul>
+            </div>
+            
+            <div class="experience-card">
+              <h3 class="job-title">Marketing Manager</h3>
+              <p class="company-name">Ten Homakase (A sushi hospitality company)</p>
+              <p class="job-location">New York, NY</p>
+              <p class="job-duration">June 2021 – May 2023</p>
+              <ul class="job-details">
+                <li>Designed company branding including graphics, custom menus, marketing slide decks, and implemented company website</li>
+                <li>Managed social media and email marketing campaigns, resulting in the acquisition of 100+ new business partners and clients</li>
+              </ul>
+            </div>
+            
+            <div class="experience-note">
+              <em>Between 2018-2021, I interned at 4 companies and mainly helped with online presence, design, marketing, and operational tasks</em>
+            </div>
+            
+            <h2 class="popup-section-title resume-section">Extracurricular Activities</h2>
+            
+            <div class="experience-card">
+              <p class="activity-org">Computing and Information Science (Bowers CIS) Course Staff</p>
+              <p class="activity-location">Ithaca, NY</p>
+              <p class="activity-duration">August 2023 – May 2024</p>
+              <p class="activity-courses">INFO4100: Learning Analytics with R, INFO4240: Designing Technology for Social Impact</p>
+              <ul class="activity-details">
+                <li>Developed a CLI grading analytics system using Python and Canvas CMS API for preventing biased grading practices from course staff</li>
+                <li>Developed Python script to assess which factors contribute to student success, used to make data-driven class/coursework improvements</li>
+                <li>Graded student code and writing projects, assisted professors during lectures, and held office hours</li>
+              </ul>
+            </div>
+            
+            <div class="experience-card">
+              <p class="activity-org">Operations Research & Information Engineering (ORIE)</p>
+              <p class="activity-location">Ithaca, NY</p>
+              <p class="activity-duration">September 2023 – May 2024</p>
+              <p class="activity-courses">Mail Services Optimization Research Project, LLM Research Project</p>
+              <ul class="activity-details">
+                <li>Proposed POC for mailroom organization system using hash function based ID system after analyzing observational data</li>
+                <li>Read and presented on academic papers about LLM's application to workplace optimization to technical and non-technical audiences</li>
+              </ul>
+            </div>
+            
+            <div class="experience-card">
+              <p class="activity-org">Pi Sigma Epsilon (Professional business fraternity)</p>
+              <p class="activity-location">Ithaca, NY</p>
+              <p class="activity-duration">September 2021 – May 2024</p>
+              <ul class="activity-details">
+                <li>Selected to join professional development program (15% acceptance), which includes presentations, research assignments, and interviews</li>
+              </ul>
+            </div>
+
+            <div class="experience-card">
+                <p class="activity-org">Delta Gamma (Social sorority)</p>
+                <p class="activity-location">Ithaca, NY</p>
+                <p class="activity-duration">September 2021 – May 2024</p>
+                <ul class="activity-details">
+                  <li>Director of Public Relations</li>
+                </ul>
+              </div>
+            
+            <h2 class="popup-section-title resume-section">Skills & Interests</h2>
+            
+            <div class="skills-section">
+              <h3 class="skills-subtitle">Technologies & Tools</h3>
+              <p class="skills-list-text">Python, HTML/CSS, JavaScript, SQL, R, Docker, Spark, Trino, Airflow, OpenTelemetry, Great Expectations, Slack API, Tableau, Git, Superset, Jaeger, Tempo, Adobe Illustrator, Figma</p>
+              
+              <h3 class="skills-subtitle">Interests</h3>
+              <p class="interests-text">Graphic design (creating posters and logos), GenAI/vibe-coding, UI design, modern art, nature, woodworking, cooking</p>
+            </div>
+            
+            <div class="popup-footer resume-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="contact-popup" class="popup-overlay hidden">
+      <div class="popup-content">
+        <div class="popup-header">
+          <button class="popup-close" onclick="closePopup('contact')">✕</button>
+        </div>
+        <div class="popup-body">
+          <div class="popup-content-wrapper">
+            <div class="contact-info-container">
+              <div class="contact-item">
+                <strong class="contact-label">Email:</strong> mitrafarzami@gmail.com
+              </div>
+              <div class="contact-item">
+                <strong class="contact-label">Phone:</strong> +1 (646) 629-5542
+              </div>
+              <div class="contact-item" href="https://www.linkedin.com/in/mitra-farzami/">
+                <strong class="contact-label">LinkedIn:</strong> linkedin.com/in/mitra-farzami/
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="results-script.js"></script>
+    <script src="popup-script.js"></script>
+  </body>
+</html>

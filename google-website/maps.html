@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Maps - Mitra Farzami</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="results-page" class="visible" tabindex="-1">
+    <header class="results-header">
+      <div class="results-header-top">
+        <img src="GoogleLogo.png" alt="Google Logo" class="google-logo-img small">
+        <form id="results-search-form" autocomplete="off">
+          <input id="results-search-bar" type="text" value="Who is Mitra Farzami?" />
+          <div id="results-search-suggestions" class="hidden"></div>
+          <button id="results-search-btn" type="button">
+            <svg width="20" height="20" viewBox="0 0 20 20"><circle cx="9" cy="9" r="7" stroke="#888" stroke-width="2" fill="none"/><line x1="14" y1="14" x2="19" y2="19" stroke="#888" stroke-width="2"/></svg>
+          </button>
+          <button id="results-lucky-btn" type="button">I'm Feeling Lucky</button>
+        </form>
+      </div>
+      <nav class="results-nav">
+        <a id="nav-web" href="web.html">Web</a>
+        <a id="nav-images" href="images.html">Images</a>
+        <a class="active" id="nav-maps" href="maps.html">Maps</a>
+      </nav>
+    </header>
+    <div class="results-main-container">
+      <main class="search-results visible" id="maps-results">
+        <div class="results-count">Map results for Mitra Farzami</div>
+        <div class="map-container">
+          <svg viewBox="0 0 600 400" class="us-map">
+            <rect x="0" y="0" width="600" height="400" fill="#e3eafc" />
+            <!-- US outline (simplified) -->
+            <path d="M50,350 Q100,50 550,50 Q590,200 500,350 Q300,390 50,350 Z" fill="#fff" stroke="#b0b0b0" stroke-width="2" />
+            <!-- Austin -->
+            <circle cx="220" cy="320" r="10" fill="#4285f4" />
+            <text x="240" y="325" font-size="18" fill="#222">Austin</text>
+            <!-- NYC -->
+            <circle cx="520" cy="120" r="10" fill="#ea4335" />
+            <text x="540" y="125" font-size="18" fill="#222">NYC</text>
+            <!-- Ithaca -->
+            <circle cx="480" cy="100" r="10" fill="#fbbc05" />
+            <text x="500" y="105" font-size="18" fill="#222">Ithaca</text>
+          </svg>
+          <div class="map-caption">Highlighted: Austin, NYC, Ithaca</div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="results-script.js"></script>
+</body>
+</html>
