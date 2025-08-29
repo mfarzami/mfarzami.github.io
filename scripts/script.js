@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function navigateToWeb() {
     console.log('Navigating to web.html...');
     // Simple direct navigation
-    window.location.href = 'web.html';
+    window.location.href = 'https://mfarzami.github.io/web';
   }
 
   // Handle manual search
